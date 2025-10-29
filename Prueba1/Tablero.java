@@ -1,3 +1,4 @@
+package Prueba1;
 public class Tablero {
 
     private int posY;
