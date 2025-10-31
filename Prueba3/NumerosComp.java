@@ -15,17 +15,17 @@ public class NumerosComp {
     public int getpImaginario() {
         return pImaginario;
     }
-    public int sumaPReal() {
+    public int sumaPReal(NumerosComp otro) {
 
-        return pReal + pReal;
+        return pReal + otro.pReal;
     }
-    public int sumaPImaginario() {
+    public int sumaPImaginario(NumerosComp otro) {
 
-        return pImaginario + pImaginario;
+        return pImaginario + otro.pImaginario;
     }
-    public int multiplica() {
+    public int multiplica(NumerosComp otro) {
         int multiplicacion;
-        multiplicacion = (((pReal * pReal) - (pReal * pImaginario)) + ((pReal * pImaginario) + (pImaginario * pImaginario)));
+        multiplicacion = (((pReal * otro.pReal) - (pReal * otro.pImaginario)) + ((otro.pReal * pImaginario) + (pImaginario * otro.pImaginario)));
         return multiplicacion;
     }
     public String compara (NumerosComp otro) {
@@ -35,9 +35,9 @@ public class NumerosComp {
             return "Los numeros complejos son diferentes";
         }
     }
-    public int multiplicaPEntero (int entero) {
-        int multiplicacionEntero;
-        multiplicacionEntero = ((pReal * entero) + (pImaginario * entero));
+    public String multiplicaPEntero (int entero) {
+        String multiplicacionEntero;
+        multiplicacionEntero = ("El resultado de la multiplicacion es: "+"("+(pReal * entero)+", " + (pImaginario * entero)+"i)");
         return multiplicacionEntero;
     }
     
